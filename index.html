@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Animated Circle Text Logo Effects</title>
+</head>
+<body>
+    <div class="circle">
+        <div class="logo"> </div>
+            <div class="text">
+                <p>
+                    <span style="transform: rotate(0deg);">L</span>
+                    <span style="transform: rotate(5deg);">e</span>
+                    <span style="transform: rotate(10deg);">n</span>
+                    <span style="transform: rotate(15deg);">k</span>
+                    <span style="transform: rotate(20deg);">e</span>
+                    <span style="transform: rotate(25deg);">V</span>
+                    <span style="transform: rotate(30deg);">a</span>
+                    <span style="transform: rotate(35deg);">r</span>
+                    <span style="transform: rotate(40deg);">o</span>
+                    <span style="transform: rotate(45deg);">-</span>
+                    <span style="transform: rotate(50deg);">W</span>
+                    <span style="transform: rotate(55deg);">e</span>
+                    <span style="transform: rotate(60deg);">b</span>
+                    <span style="transform: rotate(65deg);">d</span>
+                    <span style="transform: rotate(70deg);">e</span>
+                    <span style="transform: rotate(75deg);">s</span>
+                    <span style="transform: rotate(80deg);">i</span>
+                    <span style="transform: rotate(85deg);">g</span>
+                    <span style="transform: rotate(90deg);">n</span>
+                    <span style="transform: rotate(95deg);">e</span>
+                    <span style="transform: rotate(100deg);">r</span>
+                </p>
+            </div>
+        </div>
+    <script src="script.js">
+        const text = document.querySelector('.text p');
+        text.innerHTML = text.innerText.split("").map(
+            (char, i) =>
+            '<span style="transform:rotate(${i * 8.2}deg)">${char}</span>'
+        ).join("");
+    </script>
+</body>
+</html>
